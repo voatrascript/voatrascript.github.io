@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nov 2, 2023 Transcript - VOA Learning English</title>
+    <style>
+        body {
+            font-family: "Roboto","Arial",sans-serif;
+        }
+        .timestamp {
+            color: #065fd4;
+            background-color: #def1ff;
+            padding: 0 4px;
+            border-radius: 4px;
+            margin-right: 4px;
+            font-size: 0.8em;
+        }
+        .text {
+            margin: 5px 0;
+            overflow-wrap: anywhere;
+        }
+    </style>
+<script src="https://www.youtube.com/iframe_api"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3DY9EQQENK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3DY9EQQENK');
+</script>
+<script>
+    // 定义全局变量以存储播放器和按钮的引用
+    let player;
+    let playPauseButton = document.getElementById('play-pause-button');
+    let subtitles = document.querySelectorAll('table tr');
+
+    // 创建 YouTube 播放器
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '315',
+            width: '560',
+            videoId: '15bhAj9ydUc',
+            playerVars: {
+                controls: 0
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    // 当播放器准备好时触发
+    function onPlayerReady(event) {
+        // 为播放/暂停按钮添加点击事件处理程序
+        playPauseButton.addEventListener('click', togglePlay);
+
+        // 为每个字幕行添加点击事件处理程序
+        subtitles.forEach((subtitle) => {
+            subtitle.addEventListener('click', () => {
+                const startTime = subtitle.getAttribute('data-start');
+                player.seekTo(startTime, true);
+                player.playVideo();
+            });
+        });
+    }
+
+    // 当播放器状态发生变化时触发
+    function onPlayerStateChange(event) {
+        if (event.data === YT.PlayerState.PLAYING) {
+            playPauseButton.textContent = '暂停';
+        } else {
+            playPauseButton.textContent = '播放';
+        }
+    }
+
+    // 切换播放/暂停状态
+    function togglePlay() {
+        if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+            player.pauseVideo();
+        } else {
+            player.playVideo();
+        }
+    }
+    document.addEventListener('keydown', function (event) {
+    if (event.key === ' ') {
+        togglePlay();
+        event.preventDefault(); // 防止页面滚动
+    }
+});
+
+</script>
+
+</head>
+<body>
+    <div id="player-container" style="display: none;">
+        <div id="player"></div>
+    </div>
+    <button id="play-pause-button">播放</button>
+    <p>
+        <a href="https://www.youtube.com/watch?v=15bhAj9ydUc" target="_blank">
+            Nov 2, 2023 VOA Learning English Broadcast
+        </a>
+    </p>
+    
+    <table>
+        
+        <tr data-start="7.472" data-end="14.436">
+            <td>
+                <span class="timestamp">00:07</span>
+            </td>
+            <td><p class="text">Welcome to Learning English, a daily 30-minute program from the Voice of America.</p></td>
+        </tr>
+        
+        <tr data-start="14.436" data-end="16.097">
+            <td>
+                <span class="timestamp">00:14</span>
+            </td>
+            <td><p class="text">I'm Ashley Thompson.</p></td>
+        </tr>
+        
+        <tr data-start="16.097" data-end="18.518">
+            <td>
+                <span class="timestamp">00:16</span>
+            </td>
+            <td><p class="text">And I'm Dan Novak.</p></td>
+        </tr>
+        
+        <tr data-start="18.518" data-end="29.703">
+            <td>
+                <span class="timestamp">00:18</span>
+            </td>
+            <td><p class="text">This program is designed for English learners, so we speak a little slower and we use words and phrases especially written for people learning English.</p></td>
+        </tr>
+        
+        <tr data-start="34.076" data-end="42.861">
+            <td>
+                <span class="timestamp">00:34</span>
+            </td>
+            <td><p class="text">Coming up on the program, Katie Weaver reports on Vietnam's plans to build a microchip factory.</p></td>
+        </tr>
+        
+        <tr data-start="42.861" data-end="53.747">
+            <td>
+                <span class="timestamp">00:42</span>
+            </td>
+            <td><p class="text">Gregory Stockle has a story on how Africa is unlikely to follow East Asia's model of growing manufacturing to reduce poverty.</p></td>
+        </tr>
+        
+        <tr data-start="53.747" data-end="63.653">
+            <td>
+                <span class="timestamp">00:53</span>
+            </td>
+            <td><p class="text">Brian Lynn brings us this week's technology report on how many of the world's electrical grids need improvements to meet climate change goals.</p></td>
+        </tr>
+        
+        <tr data-start="64.645" data-end="85.824">
+            <td>
+                <span class="timestamp">01:04</span>
+            </td>
+            <td><p class="text">Later, Jill Robbins and Andrew Smith present the lesson of the day, but first… Vietnam is holding talks with companies that manufacture semiconductors for the electronics industry to increase investment in the country.</p></td>
+        </tr>
+        
+        <tr data-start="87.079" data-end="96.161">
+            <td>
+                <span class="timestamp">01:27</span>
+            </td>
+            <td><p class="text">Two business officials, who did not want to be identified, spoke to Reuters news agency.</p></td>
+        </tr>
+        
+        <tr data-start="96.161" data-end="103.744">
+            <td>
+                <span class="timestamp">01:36</span>
+            </td>
+            <td><p class="text">They said Vietnam aims to build its first factory for computer chips.</p></td>
+        </tr>
+        
+        <tr data-start="103.744" data-end="104.244">
+            <td>
+                <span class="timestamp">01:43</span>
+            </td>
+            <td><p class="text">U.S.</p></td>
+        </tr>
+        
+        <tr data-start="104.244" data-end="110.745">
+            <td>
+                <span class="timestamp">01:44</span>
+            </td>
+            <td><p class="text">industry officials, however, have warned about the high costs.</p></td>
+        </tr>
+        
+        <tr data-start="110.745" data-end="116.427">
+            <td>
+                <span class="timestamp">01:50</span>
+            </td>
+            <td><p class="text">The Southeast Asian country is already a center for electronics.</p></td>
+        </tr>
+        
+        <tr data-start="117.674" data-end="118.074">
+            <td>
+                <span class="timestamp">01:57</span>
+            </td>
+            <td><p class="text">U.S.</p></td>
+        </tr>
+        
+        <tr data-start="118.074" data-end="129.56">
+            <td>
+                <span class="timestamp">01:58</span>
+            </td>
+            <td><p class="text">technology company Intel says it has its largest semiconductor packaging and testing plant in Vietnam.</p></td>
+        </tr>
+        
+        <tr data-start="129.56" data-end="136.284">
+            <td>
+                <span class="timestamp">02:09</span>
+            </td>
+            <td><p class="text">The country is home to several chip designing software companies.</p></td>
+        </tr>
+        
+        <tr data-start="136.284" data-end="144.868">
+            <td>
+                <span class="timestamp">02:16</span>
+            </td>
+            <td><p class="text">Vietnam is working on a plan to bring in more semiconductor investment, including foundries.</p></td>
+        </tr>
+        
+        <tr data-start="146.363" data-end="151.364">
+            <td>
+                <span class="timestamp">02:26</span>
+            </td>
+            <td><p class="text">Foundries mainly manufacture computer chips.</p></td>
+        </tr>
+        
+        <tr data-start="151.364" data-end="159.766">
+            <td>
+                <span class="timestamp">02:31</span>
+            </td>
+            <td><p class="text">Vu Tu Tang is head of the Vietnam office of the U.S.-ASEAN Business Council.</p></td>
+        </tr>
+        
+        <tr data-start="159.766" data-end="164.267">
+            <td>
+                <span class="timestamp">02:39</span>
+            </td>
+            <td><p class="text">He told Reuters that meetings with six U.S.</p></td>
+        </tr>
+        
+        <tr data-start="164.267" data-end="171.108">
+            <td>
+                <span class="timestamp">02:44</span>
+            </td>
+            <td><p class="text">chip companies took place in recent weeks, including with factory operators.</p></td>
+        </tr>
+        
+        <tr data-start="172.423" data-end="179.126">
+            <td>
+                <span class="timestamp">02:52</span>
+            </td>
+            <td><p class="text">He did not identify the companies because talks were ongoing.</p></td>
+        </tr>
+        
+        <tr data-start="179.126" data-end="189.852">
+            <td>
+                <span class="timestamp">02:59</span>
+            </td>
+            <td><p class="text">Another official, who did not want to be identified because he was not permitted to talk with the media, spoke with Reuters.</p></td>
+        </tr>
+        
+        <tr data-start="189.852" data-end="195.755">
+            <td>
+                <span class="timestamp">03:09</span>
+            </td>
+            <td><p class="text">The official said talks with possible investors have involved U.S.</p></td>
+        </tr>
+        
+        <tr data-start="195.755" data-end="201.798">
+            <td>
+                <span class="timestamp">03:15</span>
+            </td>
+            <td><p class="text">company GlobalFoundries and Taiwanese company PSMC.</p></td>
+        </tr>
+        
+        <tr data-start="203.598" data-end="221.445">
+            <td>
+                <span class="timestamp">03:23</span>
+            </td>
+            <td><p class="text">The individual said the aim was to build Vietnam's first chip manufacturing plant, most likely for less complex chips used in cars or for telecommunications uses.</p></td>
+        </tr>
+        
+        <tr data-start="221.445" data-end="229.628">
+            <td>
+                <span class="timestamp">03:41</span>
+            </td>
+            <td><p class="text">The business meetings followed an improvement in diplomatic relations between Vietnam and the U.S.</p></td>
+        </tr>
+        
+        <tr data-start="229.628" data-end="230.468">
+            <td>
+                <span class="timestamp">03:49</span>
+            </td>
+            <td><p class="text">in September.</p></td>
+        </tr>
+        
+        <tr data-start="231.721" data-end="233.663">
+            <td>
+                <span class="timestamp">03:51</span>
+            </td>
+            <td><p class="text">At that time, U.S.</p></td>
+        </tr>
+        
+        <tr data-start="233.663" data-end="240.249">
+            <td>
+                <span class="timestamp">03:53</span>
+            </td>
+            <td><p class="text">President Joe Biden visited Vietnam's capital, Hanoi.</p></td>
+        </tr>
+        
+        <tr data-start="240.249" data-end="249.857">
+            <td>
+                <span class="timestamp">04:00</span>
+            </td>
+            <td><p class="text">Biden's administration described Vietnam as a possible critical player in world semiconductor supply chains.</p></td>
+        </tr>
+        
+        <tr data-start="251.55" data-end="263.274">
+            <td>
+                <span class="timestamp">04:11</span>
+            </td>
+            <td><p class="text">GlobalFoundries joined a restricted business meeting during Biden's visit after an invitation from the president, the company said.</p></td>
+        </tr>
+        
+        <tr data-start="263.274" data-end="274.617">
+            <td>
+                <span class="timestamp">04:23</span>
+            </td>
+            <td><p class="text">However, a person with knowledge of the subject said the company has not made immediate plans to invest in Vietnam.</p></td>
+        </tr>
+        
+        <tr data-start="274.617" data-end="280.619">
+            <td>
+                <span class="timestamp">04:34</span>
+            </td>
+            <td><p class="text">We do not comment on market rumors, a GlobalFoundries spokesperson said.</p></td>
+        </tr>
+        
+        <tr data-start="281.82" data-end="287.423">
+            <td>
+                <span class="timestamp">04:41</span>
+            </td>
+            <td><p class="text">PSMC did not answer a request for comment.</p></td>
+        </tr>
+        
+        <tr data-start="287.423" data-end="298.79">
+            <td>
+                <span class="timestamp">04:47</span>
+            </td>
+            <td><p class="text">Industry officials said meetings so far were mostly to test interest and discuss possible government financial support.</p></td>
+        </tr>
+        
+        <tr data-start="298.79" data-end="309.717">
+            <td>
+                <span class="timestamp">04:58</span>
+            </td>
+            <td><p class="text">Such support would seek to persuade the companies with reasons why it would be good to build a plant there or incentives.</p></td>
+        </tr>
+        
+        <tr data-start="311.055" data-end="319.799">
+            <td>
+                <span class="timestamp">05:11</span>
+            </td>
+            <td><p class="text">They include power supplies, infrastructure, and the availability of a trained workforce.</p></td>
+        </tr>
+        
+        <tr data-start="319.799" data-end="328.763">
+            <td>
+                <span class="timestamp">05:19</span>
+            </td>
+            <td><p class="text">The Vietnamese government has said it wants its first fabrication plant by about 2030.</p></td>
+        </tr>
+        
+        <tr data-start="328.763" data-end="337.607">
+            <td>
+                <span class="timestamp">05:28</span>
+            </td>
+            <td><p class="text">On Monday, the government said chip companies would gain from the highest incentives available in Vietnam.</p></td>
+        </tr>
+        
+        <tr data-start="339.229" data-end="347.713">
+            <td>
+                <span class="timestamp">05:39</span>
+            </td>
+            <td><p class="text">Hong Nguyen is a program leader on supply chains at Hanoi's University Vietnam.</p></td>
+        </tr>
+        
+        <tr data-start="347.713" data-end="363.021">
+            <td>
+                <span class="timestamp">05:47</span>
+            </td>
+            <td><p class="text">He told Reuters that Vietnam might also support local companies, such as state-owned tech company Viettel, to build chip factories with imported equipment.</p></td>
+        </tr>
+        
+        <tr data-start="363.021" data-end="366.363">
+            <td>
+                <span class="timestamp">06:03</span>
+            </td>
+            <td><p class="text">Viettel did not answer a request for comment.</p></td>
+        </tr>
+        
+        <tr data-start="367.631" data-end="371.132">
+            <td>
+                <span class="timestamp">06:07</span>
+            </td>
+            <td><p class="text">Robert Lee is vice president of U.S.</p></td>
+        </tr>
+        
+        <tr data-start="371.132" data-end="378.015">
+            <td>
+                <span class="timestamp">06:11</span>
+            </td>
+            <td><p class="text">Synopsys, a leading chip design firm with operations in Vietnam.</p></td>
+        </tr>
+        
+        <tr data-start="378.015" data-end="388.199">
+            <td>
+                <span class="timestamp">06:18</span>
+            </td>
+            <td><p class="text">He urged the government to think twice before giving out financial support or subsidies to build chip factories.</p></td>
+        </tr>
+        
+        <tr data-start="389.594" data-end="402.765">
+            <td>
+                <span class="timestamp">06:29</span>
+            </td>
+            <td><p class="text">Speaking at Vietnam Semiconductor Summit in Hanoi on Sunday, he said building a foundry could cost as much as $50 billion.</p></td>
+        </tr>
+        
+        <tr data-start="402.765" data-end="412.914">
+            <td>
+                <span class="timestamp">06:42</span>
+            </td>
+            <td><p class="text">He said it would mean providing subsidies competitive with China, the U.S., South Korea, and the European Union.</p></td>
+        </tr>
+        
+        <tr data-start="414.449" data-end="425.921">
+            <td>
+                <span class="timestamp">06:54</span>
+            </td>
+            <td><p class="text">Each has announced spending plans for chip factories valued at between $50 billion and $150 billion.</p></td>
+        </tr>
+        
+        <tr data-start="425.921" data-end="429.505">
+            <td>
+                <span class="timestamp">07:05</span>
+            </td>
+            <td><p class="text">John Neuffer is President of the U.S.</p></td>
+        </tr>
+        
+        <tr data-start="429.505" data-end="432.288">
+            <td>
+                <span class="timestamp">07:09</span>
+            </td>
+            <td><p class="text">Semiconductor Industry Association.</p></td>
+        </tr>
+        
+        <tr data-start="433.661" data-end="450.179">
+            <td>
+                <span class="timestamp">07:13</span>
+            </td>
+            <td><p class="text">At the same meeting, he suggested the government center its attention on chip manufacturing in which Vietnam is already strong, like assembling, packaging, and testing.</p></td>
+        </tr>
+        
+        <tr data-start="450.179" data-end="450.98">
+            <td>
+                <span class="timestamp">07:30</span>
+            </td>
+            <td><p class="text">I'm Katie Weaver.</p></td>
+        </tr>
+        
+        <tr data-start="487.719" data-end="501.464">
+            <td>
+                <span class="timestamp">08:07</span>
+            </td>
+            <td><p class="text">A recent study says African countries are less likely to follow East Asia's development model of expanding manufacturing to reduce poverty.</p></td>
+        </tr>
+        
+        <tr data-start="501.464" data-end="510.227">
+            <td>
+                <span class="timestamp">08:21</span>
+            </td>
+            <td><p class="text">The study predicts a decreasing share of factory jobs for most countries by 2050.</p></td>
+        </tr>
+        
+        <tr data-start="510.227" data-end="516.509">
+            <td>
+                <span class="timestamp">08:30</span>
+            </td>
+            <td><p class="text">The Center for Global Development, or CGD, released the study this week.</p></td>
+        </tr>
+        
+        <tr data-start="518.078" data-end="525.562">
+            <td>
+                <span class="timestamp">08:38</span>
+            </td>
+            <td><p class="text">It said there will be fewer factory workers around the world in 2050.</p></td>
+        </tr>
+        
+        <tr data-start="525.562" data-end="537.309">
+            <td>
+                <span class="timestamp">08:45</span>
+            </td>
+            <td><p class="text">And the paper predicts that even in poor countries, with a lot of low-cost labor, manufacturing job growth will slow down.</p></td>
+        </tr>
+        
+        <tr data-start="537.309" data-end="543.412">
+            <td>
+                <span class="timestamp">08:57</span>
+            </td>
+            <td><p class="text">China may be an exception out of the 59 countries modeled in the study.</p></td>
+        </tr>
+        
+        <tr data-start="544.963" data-end="552.629">
+            <td>
+                <span class="timestamp">09:04</span>
+            </td>
+            <td><p class="text">The study said that China will continue to expand its share of manufacturing to 43.8% in 2050 from 30% in 2018 and 10.5% in 1975.</p></td>
+        </tr>
+        
+        <tr data-start="565.37" data-end="576.315">
+            <td>
+                <span class="timestamp">09:25</span>
+            </td>
+            <td><p class="text">The study's writers said that China will continue its strong manufacturing performance, producing higher-valued products.</p></td>
+        </tr>
+        
+        <tr data-start="576.315" data-end="590.061">
+            <td>
+                <span class="timestamp">09:36</span>
+            </td>
+            <td><p class="text">This might create some space for developing countries in Africa, Southeast Asia, and South and Central America to start producing the products China will no longer produce.</p></td>
+        </tr>
+        
+        <tr data-start="591.598" data-end="604.207">
+            <td>
+                <span class="timestamp">09:51</span>
+            </td>
+            <td><p class="text">However, it will not be enough for other countries to follow the same development path taken by East Asia in expanding manufacturing.</p></td>
+        </tr>
+        
+        <tr data-start="604.207" data-end="614.834">
+            <td>
+                <span class="timestamp">10:04</span>
+            </td>
+            <td><p class="text">Charles Kenney and Reniel Disinayake of CGD said that many countries will move straight from agriculture to services.</p></td>
+        </tr>
+        
+        <tr data-start="616.325" data-end="626.988">
+            <td>
+                <span class="timestamp">10:16</span>
+            </td>
+            <td><p class="text">They say jobs will greatly expand in services because of new technologies, even in countries such as Bangladesh and Ethiopia.</p></td>
+        </tr>
+        
+        <tr data-start="628.51" data-end="641.296">
+            <td>
+                <span class="timestamp">10:28</span>
+            </td>
+            <td><p class="text">There's still a popular idea that low-income countries will progress naturally from being dominated by agriculture to manufacturing-led growth.</p></td>
+        </tr>
+        
+        <tr data-start="641.296" data-end="646.418">
+            <td>
+                <span class="timestamp">10:41</span>
+            </td>
+            <td><p class="text">But mounting evidence suggests that's not going to happen, said Kenney.</p></td>
+        </tr>
+        
+        <tr data-start="647.915" data-end="663.641">
+            <td>
+                <span class="timestamp">10:47</span>
+            </td>
+            <td><p class="text">He said people think that farms are going to empty out across Africa and Asia in the coming years, but he said people are likely to flood into offices and stores, not factories.</p></td>
+        </tr>
+        
+        <tr data-start="663.641" data-end="666.823">
+            <td>
+                <span class="timestamp">11:03</span>
+            </td>
+            <td><p class="text">The study projects worldwide growth through the year 2050.</p></td>
+        </tr>
+        
+        <tr data-start="669.286" data-end="681.35">
+            <td>
+                <span class="timestamp">11:09</span>
+            </td>
+            <td><p class="text">It aims to predict changes in the economies of 59 countries that make up about three-quarters of the world's GDP and population.</p></td>
+        </tr>
+        
+        <tr data-start="681.35" data-end="690.832">
+            <td>
+                <span class="timestamp">11:21</span>
+            </td>
+            <td><p class="text">GDP, or Gross Domestic Product, measures all the goods and services produced in a country in a year.</p></td>
+        </tr>
+        
+        <tr data-start="690.832" data-end="696.014">
+            <td>
+                <span class="timestamp">11:30</span>
+            </td>
+            <td><p class="text">GDP is considered a good measure of the size of a nation's economy.</p></td>
+        </tr>
+        
+        <tr data-start="697.54" data-end="711.484">
+            <td>
+                <span class="timestamp">11:37</span>
+            </td>
+            <td><p class="text">The study projects that even for the lowest-income countries, the number of factory jobs will just keep up with population growth over the next 30 years.</p></td>
+        </tr>
+        
+        <tr data-start="711.484" data-end="718.506">
+            <td>
+                <span class="timestamp">11:51</span>
+            </td>
+            <td><p class="text">And it projects manufacturing will likely stay a small part of most of these countries' economies.</p></td>
+        </tr>
+        
+        <tr data-start="720.089" data-end="730.295">
+            <td>
+                <span class="timestamp">12:00</span>
+            </td>
+            <td><p class="text">Across all low-income countries, manufacturing jobs are projected to remain below 8% of total employment.</p></td>
+        </tr>
+        
+        <tr data-start="730.295" data-end="738.88">
+            <td>
+                <span class="timestamp">12:10</span>
+            </td>
+            <td><p class="text">The study projects the share of manufacturing jobs in high-income countries will continue to fall to 8.3% by 2050, from 11.4% currently.</p></td>
+        </tr>
+        
+        <tr data-start="745.578" data-end="760.246">
+            <td>
+                <span class="timestamp">12:25</span>
+            </td>
+            <td><p class="text">Jobs in private service industries are expected to make up 37% of worldwide jobs by 2050 and 26% in low-income countries.</p></td>
+        </tr>
+        
+        <tr data-start="760.246" data-end="764.949">
+            <td>
+                <span class="timestamp">12:40</span>
+            </td>
+            <td><p class="text">That is up from about 12% currently.</p></td>
+        </tr>
+        
+        <tr data-start="764.949" data-end="766.25">
+            <td>
+                <span class="timestamp">12:44</span>
+            </td>
+            <td><p class="text">I'm Gregory Stockel,</p></td>
+        </tr>
+        
+        <tr data-start="775.683" data-end="775.943">
+            <td>
+                <span class="timestamp">12:55</span>
+            </td>
+            <td><p class="text">Thank you.</p></td>
+        </tr>
+        
+        <tr data-start="800.737" data-end="816.207">
+            <td>
+                <span class="timestamp">13:20</span>
+            </td>
+            <td><p class="text">The International Energy Agency, IEA, says many world electrical grids will need major improvements to support international climate change goals.</p></td>
+        </tr>
+        
+        <tr data-start="817.515" data-end="827.682">
+            <td>
+                <span class="timestamp">13:37</span>
+            </td>
+            <td><p class="text">In a new report, the IEA calls on nations to invest in aging electrical grid systems.</p></td>
+        </tr>
+        
+        <tr data-start="827.682" data-end="837.149">
+            <td>
+                <span class="timestamp">13:47</span>
+            </td>
+            <td><p class="text">The Paris-based organization works with member governments to help them shape energy policies.</p></td>
+        </tr>
+        
+        <tr data-start="837.149" data-end="845.635">
+            <td>
+                <span class="timestamp">13:57</span>
+            </td>
+            <td><p class="text">The IEA examined electricity grids in countries across the world to produce its report.</p></td>
+        </tr>
+        
+        <tr data-start="846.587" data-end="863.342">
+            <td>
+                <span class="timestamp">14:06</span>
+            </td>
+            <td><p class="text">The report found that, for the most part, electrical grid systems have not kept up with clean energy technologies like solar, wind, electric cars, and heat pumps.</p></td>
+        </tr>
+        
+        <tr data-start="864.643" data-end="880.642">
+            <td>
+                <span class="timestamp">14:24</span>
+            </td>
+            <td><p class="text">One of the main findings is that to meet all national climate and energy goals, about 80 million kilometers of power lines will have to be added or replaced by 2040.</p></td>
+        </tr>
+        
+        <tr data-start="882.935" data-end="892.741">
+            <td>
+                <span class="timestamp">14:42</span>
+            </td>
+            <td><p class="text">The report noted that this amount is equal to the whole existing worldwide electricity grid.</p></td>
+        </tr>
+        
+        <tr data-start="892.741" data-end="906.969">
+            <td>
+                <span class="timestamp">14:52</span>
+            </td>
+            <td><p class="text">The 2015 Paris Climate Agreement has set a goal to limit warming worldwide to 1.5 degrees Celsius since pre-industrial times.</p></td>
+        </tr>
+        
+        <tr data-start="908.03" data-end="917.76">
+            <td>
+                <span class="timestamp">15:08</span>
+            </td>
+            <td><p class="text">Climate scientists believe the way to meet that goal is to reduce the use of greenhouse gases.</p></td>
+        </tr>
+        
+        <tr data-start="917.76" data-end="925.127">
+            <td>
+                <span class="timestamp">15:17</span>
+            </td>
+            <td><p class="text">They say this kind of pollution, linked largely to human activities, warms the planet.</p></td>
+        </tr>
+        
+        <tr data-start="926.218" data-end="937.031">
+            <td>
+                <span class="timestamp">15:26</span>
+            </td>
+            <td><p class="text">IEA Executive Director Fatih Birol spoke to reporters from the Associated Press about the report.</p></td>
+        </tr>
+        
+        <tr data-start="937.031" data-end="945.16">
+            <td>
+                <span class="timestamp">15:37</span>
+            </td>
+            <td><p class="text">He said there are many renewable energy projects waiting to connect to electricity systems.</p></td>
+        </tr>
+        
+        <tr data-start="946.181" data-end="954.427">
+            <td>
+                <span class="timestamp">15:46</span>
+            </td>
+            <td><p class="text">but currently most grids are not equipped to work with the greener technology.</p></td>
+        </tr>
+        
+        <tr data-start="954.427" data-end="961.452">
+            <td>
+                <span class="timestamp">15:54</span>
+            </td>
+            <td><p class="text">Birol said many of the renewable projects are ready or nearly ready to go.</p></td>
+        </tr>
+        
+        <tr data-start="962.535" data-end="973.638">
+            <td>
+                <span class="timestamp">16:02</span>
+            </td>
+            <td><p class="text">If grid changes could be completed, the projects could produce about 1,500 gigawatts of power.</p></td>
+        </tr>
+        
+        <tr data-start="973.638" data-end="984.282">
+            <td>
+                <span class="timestamp">16:13</span>
+            </td>
+            <td><p class="text">This is about five times the amount of solar and wind capacity added worldwide last year, Birrell said.</p></td>
+        </tr>
+        
+        <tr data-start="985.502" data-end="998.114">
+            <td>
+                <span class="timestamp">16:25</span>
+            </td>
+            <td><p class="text">If investments in grid systems do not increase, the report predicts the chance of reaching the Paris Agreement's goal drops sharply.</p></td>
+        </tr>
+        
+        <tr data-start="998.114" data-end="1004.82">
+            <td>
+                <span class="timestamp">16:38</span>
+            </td>
+            <td><p class="text">The IEA said such investments need to double to more than $600 billion a year by 2030.</p></td>
+        </tr>
+        
+        <tr data-start="1009.404" data-end="1015.825">
+            <td>
+                <span class="timestamp">16:49</span>
+            </td>
+            <td><p class="text">But there are difficulties getting new grid improvements approved.</p></td>
+        </tr>
+        
+        <tr data-start="1015.825" data-end="1031.109">
+            <td>
+                <span class="timestamp">16:55</span>
+            </td>
+            <td><p class="text">The IEA notes that it is not uncommon for a single high-power overhead power line to take 5 to 13 years to get government approvals in developed economies.</p></td>
+        </tr>
+        
+        <tr data-start="1032.354" data-end="1042.386">
+            <td>
+                <span class="timestamp">17:12</span>
+            </td>
+            <td><p class="text">Approvals in nations such as China and India can be much shorter, the organization said.</p></td>
+        </tr>
+        
+        <tr data-start="1042.386" data-end="1050.816">
+            <td>
+                <span class="timestamp">17:22</span>
+            </td>
+            <td><p class="text">One project examined in the report aims to carry wind power from northern to southern Germany.</p></td>
+        </tr>
+        
+        <tr data-start="1052.02" data-end="1064.111">
+            <td>
+                <span class="timestamp">17:32</span>
+            </td>
+            <td><p class="text">First planned in 2014, it was delayed after political opposition to an overhead line meant it was buried instead.</p></td>
+        </tr>
+        
+        <tr data-start="1064.111" data-end="1068.515">
+            <td>
+                <span class="timestamp">17:44</span>
+            </td>
+            <td><p class="text">Completion of the project is now expected in 2028 instead of 2022.</p></td>
+        </tr>
+        
+        <tr data-start="1072.899" data-end="1084.749">
+            <td>
+                <span class="timestamp">17:52</span>
+            </td>
+            <td><p class="text">Other important projects are delayed, including the 400-km Bay of Biscay connector between Spain and France.</p></td>
+        </tr>
+        
+        <tr data-start="1084.749" data-end="1088.592">
+            <td>
+                <span class="timestamp">18:04</span>
+            </td>
+            <td><p class="text">Officials expect to finish the work in 2028 instead of 2025.</p></td>
+        </tr>
+        
+        <tr data-start="1093.241" data-end="1105.95">
+            <td>
+                <span class="timestamp">18:13</span>
+            </td>
+            <td><p class="text">and a line to bring wind power from New Mexico to Arizona and California just started last month after years of delays.</p></td>
+        </tr>
+        
+        <tr data-start="1105.95" data-end="1107.491">
+            <td>
+                <span class="timestamp">18:25</span>
+            </td>
+            <td><p class="text">I'm Brian Lynn.</p></td>
+        </tr>
+        
+        <tr data-start="1141.404" data-end="1146.628">
+            <td>
+                <span class="timestamp">19:01</span>
+            </td>
+            <td><p class="text">VOA Learning English has launched a new program for children.</p></td>
+        </tr>
+        
+        <tr data-start="1146.628" data-end="1150.191">
+            <td>
+                <span class="timestamp">19:06</span>
+            </td>
+            <td><p class="text">It is called Let's Learn English with Anna.</p></td>
+        </tr>
+        
+        <tr data-start="1150.191" data-end="1160.179">
+            <td>
+                <span class="timestamp">19:10</span>
+            </td>
+            <td><p class="text">The new course aims to teach children American English through asking and answering questions and experiencing fun situations.</p></td>
+        </tr>
+        
+        <tr data-start="1161.058" data-end="1167.079">
+            <td>
+                <span class="timestamp">19:21</span>
+            </td>
+            <td><p class="text">For more information, visit our website, learningenglish.bonews.com.</p></td>
+        </tr>
+        
+        <tr data-start="1194.326" data-end="1216.281">
+            <td>
+                <span class="timestamp">19:54</span>
+            </td>
+            <td><p class="text">Hello, my name is Anna Mateo My name is Andrew Smith, and I'm Jill Robbins You're listening to the lesson of the day on the learning English podcast Welcome to the part of the show where we help you do more with our series.</p></td>
+        </tr>
+        
+        <tr data-start="1216.281" data-end="1223.766">
+            <td>
+                <span class="timestamp">20:16</span>
+            </td>
+            <td><p class="text">Let's learn English The series shows Anna Mateo in her work and life in Washington DC</p></td>
+        </tr>
+        
+        <tr data-start="1225.492" data-end="1230.495">
+            <td>
+                <span class="timestamp">20:25</span>
+            </td>
+            <td><p class="text">The biggest, the fastest, the youngest, and the oldest.</p></td>
+        </tr>
+        
+        <tr data-start="1230.495" data-end="1236.96">
+            <td>
+                <span class="timestamp">20:30</span>
+            </td>
+            <td><p class="text">The most, the least, the worst, and the best.</p></td>
+        </tr>
+        
+        <tr data-start="1236.96" data-end="1243.504">
+            <td>
+                <span class="timestamp">20:36</span>
+            </td>
+            <td><p class="text">All of these expressions, you've just heard, have that small word that is so important in English.</p></td>
+        </tr>
+        
+        <tr data-start="1243.504" data-end="1248.907">
+            <td>
+                <span class="timestamp">20:43</span>
+            </td>
+            <td><p class="text">In fact, it's the most common word in all of English.</p></td>
+        </tr>
+        
+        <tr data-start="1248.907" data-end="1251.149">
+            <td>
+                <span class="timestamp">20:48</span>
+            </td>
+            <td><p class="text">And there it was again.</p></td>
+        </tr>
+        
+        <tr data-start="1251.149" data-end="1254.271">
+            <td>
+                <span class="timestamp">20:51</span>
+            </td>
+            <td><p class="text">Jill just said, the most common.</p></td>
+        </tr>
+        
+        <tr data-start="1255.666" data-end="1263.991">
+            <td>
+                <span class="timestamp">20:55</span>
+            </td>
+            <td><p class="text">On today's podcast lesson, we're looking at the word the when we use the superlative.</p></td>
+        </tr>
+        
+        <tr data-start="1263.991" data-end="1270.975">
+            <td>
+                <span class="timestamp">21:03</span>
+            </td>
+            <td><p class="text">The superlative describes something with the highest degree of equality.</p></td>
+        </tr>
+        
+        <tr data-start="1270.975" data-end="1272.275">
+            <td>
+                <span class="timestamp">21:10</span>
+            </td>
+            <td><p class="text">There it is again.</p></td>
+        </tr>
+        
+        <tr data-start="1272.275" data-end="1274.617">
+            <td>
+                <span class="timestamp">21:12</span>
+            </td>
+            <td><p class="text">You just said the highest degree.</p></td>
+        </tr>
+        
+        <tr data-start="1274.617" data-end="1279.899">
+            <td>
+                <span class="timestamp">21:14</span>
+            </td>
+            <td><p class="text">You see, we can't even talk about the superlative without using the word the.</p></td>
+        </tr>
+        
+        <tr data-start="1279.899" data-end="1284.062">
+            <td>
+                <span class="timestamp">21:19</span>
+            </td>
+            <td><p class="text">Well, it's pretty hard to avoid using the word the.</p></td>
+        </tr>
+        
+        <tr data-start="1285.732" data-end="1292.476">
+            <td>
+                <span class="timestamp">21:25</span>
+            </td>
+            <td><p class="text">And I think our listeners probably already know about comparing things in English.</p></td>
+        </tr>
+        
+        <tr data-start="1292.476" data-end="1301.062">
+            <td>
+                <span class="timestamp">21:32</span>
+            </td>
+            <td><p class="text">For example, the Empire State Building in New York City is taller than the Eiffel Tower in Paris.</p></td>
+        </tr>
+        
+        <tr data-start="1301.062" data-end="1307.346">
+            <td>
+                <span class="timestamp">21:41</span>
+            </td>
+            <td><p class="text">And the Burj al-Khalifa is the tallest building in the world.</p></td>
+        </tr>
+        
+        <tr data-start="1307.346" data-end="1311.129">
+            <td>
+                <span class="timestamp">21:47</span>
+            </td>
+            <td><p class="text">We use the suffix ER for comparisons</p></td>
+        </tr>
+        
+        <tr data-start="1311.969" data-end="1319.214">
+            <td>
+                <span class="timestamp">21:51</span>
+            </td>
+            <td><p class="text">like X is taller than Y. But what has this got to do with Anna?</p></td>
+        </tr>
+        
+        <tr data-start="1319.214" data-end="1324.618">
+            <td>
+                <span class="timestamp">21:59</span>
+            </td>
+            <td><p class="text">It seems like we're digressing or getting away from the main topic.</p></td>
+        </tr>
+        
+        <tr data-start="1324.618" data-end="1337.587">
+            <td>
+                <span class="timestamp">22:04</span>
+            </td>
+            <td><p class="text">We're almost digressing, but Anna mentions some superlatives when she visits a seafood market in Lesson 30 of the Let's Learn English series.</p></td>
+        </tr>
+        
+        <tr data-start="1338.897" data-end="1342.858">
+            <td>
+                <span class="timestamp">22:18</span>
+            </td>
+            <td><p class="text">Listen for the superlative in this example.</p></td>
+        </tr>
+        
+        <tr data-start="1342.858" data-end="1347.619">
+            <td>
+                <span class="timestamp">22:22</span>
+            </td>
+            <td><p class="text">You will hear the superlative used twice.</p></td>
+        </tr>
+        
+        <tr data-start="1347.619" data-end="1348.6">
+            <td>
+                <span class="timestamp">22:27</span>
+            </td>
+            <td><p class="text">Hello.</p></td>
+        </tr>
+        
+        <tr data-start="1348.6" data-end="1349.8">
+            <td>
+                <span class="timestamp">22:28</span>
+            </td>
+            <td><p class="text">Washington, D.C.</p></td>
+        </tr>
+        
+        <tr data-start="1349.8" data-end="1352.18">
+            <td>
+                <span class="timestamp">22:29</span>
+            </td>
+            <td><p class="text">sits on the Potomac River.</p></td>
+        </tr>
+        
+        <tr data-start="1352.18" data-end="1356.782">
+            <td>
+                <span class="timestamp">22:32</span>
+            </td>
+            <td><p class="text">This river is important to the history and culture of the city.</p></td>
+        </tr>
+        
+        <tr data-start="1356.782" data-end="1361.503">
+            <td>
+                <span class="timestamp">22:36</span>
+            </td>
+            <td><p class="text">Today, I am at an outdoor seafood market near the Potomac River.</p></td>
+        </tr>
+        
+        <tr data-start="1362.685" data-end="1369.028">
+            <td>
+                <span class="timestamp">22:42</span>
+            </td>
+            <td><p class="text">Some say it is the oldest outdoor seafood market in the United States.</p></td>
+        </tr>
+        
+        <tr data-start="1369.028" data-end="1371.609">
+            <td>
+                <span class="timestamp">22:49</span>
+            </td>
+            <td><p class="text">I am here to buy seafood.</p></td>
+        </tr>
+        
+        <tr data-start="1371.609" data-end="1376.252">
+            <td>
+                <span class="timestamp">22:51</span>
+            </td>
+            <td><p class="text">Let's see what they have.</p></td>
+        </tr>
+        
+        <tr data-start="1376.252" data-end="1378.633">
+            <td>
+                <span class="timestamp">22:56</span>
+            </td>
+            <td><p class="text">Excuse me, can you help me?</p></td>
+        </tr>
+        
+        <tr data-start="1378.633" data-end="1380.334">
+            <td>
+                <span class="timestamp">22:58</span>
+            </td>
+            <td><p class="text">Sure, what do you need?</p></td>
+        </tr>
+        
+        <tr data-start="1380.334" data-end="1381.594">
+            <td>
+                <span class="timestamp">23:00</span>
+            </td>
+            <td><p class="text">Pete!</p></td>
+        </tr>
+        
+        <tr data-start="1381.594" data-end="1382.315">
+            <td>
+                <span class="timestamp">23:01</span>
+            </td>
+            <td><p class="text">Anna!</p></td>
+        </tr>
+        
+        <tr data-start="1382.315" data-end="1384.396">
+            <td>
+                <span class="timestamp">23:02</span>
+            </td>
+            <td><p class="text">What are you doing here?</p></td>
+        </tr>
+        
+        <tr data-start="1384.396" data-end="1386.277">
+            <td>
+                <span class="timestamp">23:04</span>
+            </td>
+            <td><p class="text">I work here.</p></td>
+        </tr>
+        
+        <tr data-start="1386.277" data-end="1388.898">
+            <td>
+                <span class="timestamp">23:06</span>
+            </td>
+            <td><p class="text">You know, it's not easy to be a writer.</p></td>
+        </tr>
+        
+        <tr data-start="1388.898" data-end="1390.419">
+            <td>
+                <span class="timestamp">23:08</span>
+            </td>
+            <td><p class="text">Yeah, I heard that.</p></td>
+        </tr>
+        
+        <tr data-start="1392.026" data-end="1394.808">
+            <td>
+                <span class="timestamp">23:12</span>
+            </td>
+            <td><p class="text">But this job is great.</p></td>
+        </tr>
+        
+        <tr data-start="1394.808" data-end="1401.554">
+            <td>
+                <span class="timestamp">23:14</span>
+            </td>
+            <td><p class="text">I work outside by the river, and I can eat all the free seafood I want.</p></td>
+        </tr>
+        
+        <tr data-start="1401.554" data-end="1403.415">
+            <td>
+                <span class="timestamp">23:21</span>
+            </td>
+            <td><p class="text">That is great, Pete.</p></td>
+        </tr>
+        
+        <tr data-start="1403.415" data-end="1408.26">
+            <td>
+                <span class="timestamp">23:23</span>
+            </td>
+            <td><p class="text">In fact, I am here to buy some seafood for my dinner party.</p></td>
+        </tr>
+        
+        <tr data-start="1408.26" data-end="1409.941">
+            <td>
+                <span class="timestamp">23:28</span>
+            </td>
+            <td><p class="text">You came to the right place.</p></td>
+        </tr>
+        
+        <tr data-start="1409.941" data-end="1413.424">
+            <td>
+                <span class="timestamp">23:29</span>
+            </td>
+            <td><p class="text">They have the freshest seafood in town.</p></td>
+        </tr>
+        
+        <tr data-start="1413.424" data-end="1416.467">
+            <td>
+                <span class="timestamp">23:33</span>
+            </td>
+            <td><p class="text">Did you hear the superlative in that last sentence?</p></td>
+        </tr>
+        
+        <tr data-start="1416.467" data-end="1418.889">
+            <td>
+                <span class="timestamp">23:36</span>
+            </td>
+            <td><p class="text">They have the freshest seafood in town.</p></td>
+        </tr>
+        
+        <tr data-start="1420.24" data-end="1430.582">
+            <td>
+                <span class="timestamp">23:40</span>
+            </td>
+            <td><p class="text">And a bit earlier, Anna said, Some say it is the oldest outdoor seafood market in the United States.</p></td>
+        </tr>
+        
+        <tr data-start="1430.582" data-end="1443.265">
+            <td>
+                <span class="timestamp">23:50</span>
+            </td>
+            <td><p class="text">The superlative adds the suffix est to one-syllable adjectives or to two-syllable adjectives that end in the letter y, like the word happy.</p></td>
+        </tr>
+        
+        <tr data-start="1443.265" data-end="1448.886">
+            <td>
+                <span class="timestamp">24:03</span>
+            </td>
+            <td><p class="text">But what about an adjective with many syllables, like the word delicious?</p></td>
+        </tr>
+        
+        <tr data-start="1450.236" data-end="1453.718">
+            <td>
+                <span class="timestamp">24:10</span>
+            </td>
+            <td><p class="text">We can't say deliciousest.</p></td>
+        </tr>
+        
+        <tr data-start="1453.718" data-end="1457.24">
+            <td>
+                <span class="timestamp">24:13</span>
+            </td>
+            <td><p class="text">That's hard to pronounce.</p></td>
+        </tr>
+        
+        <tr data-start="1457.24" data-end="1467.526">
+            <td>
+                <span class="timestamp">24:17</span>
+            </td>
+            <td><p class="text">Yeah, when the adjective is longer, usually two or more syllables, we just put the two words the most or the least before it.</p></td>
+        </tr>
+        
+        <tr data-start="1467.526" data-end="1473.27">
+            <td>
+                <span class="timestamp">24:27</span>
+            </td>
+            <td><p class="text">For example, we could say the most delicious or the least expensive.</p></td>
+        </tr>
+        
+        <tr data-start="1474.577" data-end="1479.078">
+            <td>
+                <span class="timestamp">24:34</span>
+            </td>
+            <td><p class="text">And here's another example with the adjective wonderful.</p></td>
+        </tr>
+        
+        <tr data-start="1479.078" data-end="1481.498">
+            <td>
+                <span class="timestamp">24:39</span>
+            </td>
+            <td><p class="text">There's a popular song in the U.S.</p></td>
+        </tr>
+        
+        <tr data-start="1481.498" data-end="1483.239">
+            <td>
+                <span class="timestamp">24:41</span>
+            </td>
+            <td><p class="text">for the Christmas holiday.</p></td>
+        </tr>
+        
+        <tr data-start="1483.239" data-end="1497.041">
+            <td>
+                <span class="timestamp">24:43</span>
+            </td>
+            <td><p class="text">It's called, It's the Most Wonderful Time of the Year.</p></td>
+        </tr>
+        
+        <tr data-start="1497.041" data-end="1503.102">
+            <td>
+                <span class="timestamp">24:57</span>
+            </td>
+            <td><p class="text">Coming back to Anna's visit to the seafood market, a bit later in lesson 30, we hear this.</p></td>
+        </tr>
+        
+        <tr data-start="1504.69" data-end="1507.691">
+            <td>
+                <span class="timestamp">25:04</span>
+            </td>
+            <td><p class="text">The crabs here are delicious.</p></td>
+        </tr>
+        
+        <tr data-start="1507.691" data-end="1513.713">
+            <td>
+                <span class="timestamp">25:07</span>
+            </td>
+            <td><p class="text">They are the best because they come from the nearby Chesapeake Bay.</p></td>
+        </tr>
+        
+        <tr data-start="1513.713" data-end="1515.133">
+            <td>
+                <span class="timestamp">25:13</span>
+            </td>
+            <td><p class="text">Walk this way.</p></td>
+        </tr>
+        
+        <tr data-start="1515.133" data-end="1518.674">
+            <td>
+                <span class="timestamp">25:15</span>
+            </td>
+            <td><p class="text">How many crabs do you want?</p></td>
+        </tr>
+        
+        <tr data-start="1518.674" data-end="1521.315">
+            <td>
+                <span class="timestamp">25:18</span>
+            </td>
+            <td><p class="text">I want a dozen crabs.</p></td>
+        </tr>
+        
+        <tr data-start="1521.315" data-end="1523.676">
+            <td>
+                <span class="timestamp">25:21</span>
+            </td>
+            <td><p class="text">You should get the larger crabs.</p></td>
+        </tr>
+        
+        <tr data-start="1523.676" data-end="1526.677">
+            <td>
+                <span class="timestamp">25:23</span>
+            </td>
+            <td><p class="text">They have the most meat.</p></td>
+        </tr>
+        
+        <tr data-start="1526.677" data-end="1532.379">
+            <td>
+                <span class="timestamp">25:26</span>
+            </td>
+            <td><p class="text">You could hear the superlatives the best and the most</p></td>
+        </tr>
+        
+        <tr data-start="1533.812" data-end="1543.414">
+            <td>
+                <span class="timestamp">25:33</span>
+            </td>
+            <td><p class="text">And if you were listening carefully, you might have noticed something that seems to break the rule of comparisons.</p></td>
+        </tr>
+        
+        <tr data-start="1543.414" data-end="1551.736">
+            <td>
+                <span class="timestamp">25:43</span>
+            </td>
+            <td><p class="text">Pete uses the word the before the comparative form with the er suffix.</p></td>
+        </tr>
+        
+        <tr data-start="1551.736" data-end="1554.117">
+            <td>
+                <span class="timestamp">25:51</span>
+            </td>
+            <td><p class="text">You should get the larger crabs.</p></td>
+        </tr>
+        
+        <tr data-start="1554.117" data-end="1556.638">
+            <td>
+                <span class="timestamp">25:54</span>
+            </td>
+            <td><p class="text">They have the most meat.</p></td>
+        </tr>
+        
+        <tr data-start="1556.638" data-end="1561.799">
+            <td>
+                <span class="timestamp">25:56</span>
+            </td>
+            <td><p class="text">Normally, we don't use the word the before the adjective in comparisons.</p></td>
+        </tr>
+        
+        <tr data-start="1561.799" data-end="1562.039">
+            <td>
+                <span class="timestamp">26:01</span>
+            </td>
+            <td><p class="text">Right.</p></td>
+        </tr>
+        
+        <tr data-start="1562.853" data-end="1568.655">
+            <td>
+                <span class="timestamp">26:02</span>
+            </td>
+            <td><p class="text">We just say, bigger, larger, taller, and so on.</p></td>
+        </tr>
+        
+        <tr data-start="1568.655" data-end="1577.079">
+            <td>
+                <span class="timestamp">26:08</span>
+            </td>
+            <td><p class="text">So, for example, a simple comparison would be, these crabs are larger than those crabs.</p></td>
+        </tr>
+        
+        <tr data-start="1577.079" data-end="1587.803">
+            <td>
+                <span class="timestamp">26:17</span>
+            </td>
+            <td><p class="text">But, if we already can see the two choices, and we already know which one is larger, then we identify one group by saying, the larger ones.</p></td>
+        </tr>
+        
+        <tr data-start="1587.803" data-end="1588.303">
+            <td>
+                <span class="timestamp">26:27</span>
+            </td>
+            <td><p class="text">That's right.</p></td>
+        </tr>
+        
+        <tr data-start="1589.13" data-end="1595.013">
+            <td>
+                <span class="timestamp">26:29</span>
+            </td>
+            <td><p class="text">The word the is used to identify things, among many other uses.</p></td>
+        </tr>
+        
+        <tr data-start="1595.013" data-end="1600.275">
+            <td>
+                <span class="timestamp">26:35</span>
+            </td>
+            <td><p class="text">It turns out the word the is quite useful in English.</p></td>
+        </tr>
+        
+        <tr data-start="1600.275" data-end="1601.536">
+            <td>
+                <span class="timestamp">26:40</span>
+            </td>
+            <td><p class="text">That's true.</p></td>
+        </tr>
+        
+        <tr data-start="1601.536" data-end="1605.618">
+            <td>
+                <span class="timestamp">26:41</span>
+            </td>
+            <td><p class="text">There's another word Ana uses that our listeners should notice.</p></td>
+        </tr>
+        
+        <tr data-start="1605.618" data-end="1609.099">
+            <td>
+                <span class="timestamp">26:45</span>
+            </td>
+            <td><p class="text">It begins with the letter D. Listen.</p></td>
+        </tr>
+        
+        <tr data-start="1609.099" data-end="1612.661">
+            <td>
+                <span class="timestamp">26:49</span>
+            </td>
+            <td><p class="text">How many crabs do you want?</p></td>
+        </tr>
+        
+        <tr data-start="1612.661" data-end="1614.742">
+            <td>
+                <span class="timestamp">26:52</span>
+            </td>
+            <td><p class="text">I want a dozen crabs.</p></td>
+        </tr>
+        
+        <tr data-start="1615.765" data-end="1618.568">
+            <td>
+                <span class="timestamp">26:55</span>
+            </td>
+            <td><p class="text">Pete asks, how many?</p></td>
+        </tr>
+        
+        <tr data-start="1618.568" data-end="1628.377">
+            <td>
+                <span class="timestamp">26:58</span>
+            </td>
+            <td><p class="text">So we know that the word dozen, that's spelled D-O-Z-E-N, is a quantity.</p></td>
+        </tr>
+        
+        <tr data-start="1628.377" data-end="1633.642">
+            <td>
+                <span class="timestamp">27:08</span>
+            </td>
+            <td><p class="text">A quantity means an amount or a certain number of items.</p></td>
+        </tr>
+        
+        <tr data-start="1633.642" data-end="1638.347">
+            <td>
+                <span class="timestamp">27:13</span>
+            </td>
+            <td><p class="text">Listeners, do you know how many things are in a dozen?</p></td>
+        </tr>
+        
+        <tr data-start="1638.347" data-end="1639.208">
+            <td>
+                <span class="timestamp">27:18</span>
+            </td>
+            <td><p class="text">Here's a hint.</p></td>
+        </tr>
+        
+        <tr data-start="1640.262" data-end="1641.282">
+            <td>
+                <span class="timestamp">27:20</span>
+            </td>
+            <td><p class="text">In the U.S.</p></td>
+        </tr>
+        
+        <tr data-start="1641.282" data-end="1649.426">
+            <td>
+                <span class="timestamp">27:21</span>
+            </td>
+            <td><p class="text">and other countries, in the grocery store, eggs are often sold by the dozen.</p></td>
+        </tr>
+        
+        <tr data-start="1649.426" data-end="1658.45">
+            <td>
+                <span class="timestamp">27:29</span>
+            </td>
+            <td><p class="text">And the answer is... 12!</p></td>
+        </tr>
+        
+        <tr data-start="1658.45" data-end="1660.451">
+            <td>
+                <span class="timestamp">27:38</span>
+            </td>
+            <td><p class="text">Well, that was quite exciting.</p></td>
+        </tr>
+        
+        <tr data-start="1661.772" data-end="1671.058">
+            <td>
+                <span class="timestamp">27:41</span>
+            </td>
+            <td><p class="text">But knowing the expression a dozen or dozens can be useful, and not only when shopping for eggs.</p></td>
+        </tr>
+        
+        <tr data-start="1671.058" data-end="1683.885">
+            <td>
+                <span class="timestamp">27:51</span>
+            </td>
+            <td><p class="text">Many news reports, including those on the Learning English website, use the word dozen or dozens to describe how many things there are.</p></td>
+        </tr>
+        
+        <tr data-start="1683.885" data-end="1690.93">
+            <td>
+                <span class="timestamp">28:03</span>
+            </td>
+            <td><p class="text">There's also a well-known movie called Cheaper by the Dozen, based on a book about an American family with 12 children.</p></td>
+        </tr>
+        
+        <tr data-start="1692.654" data-end="1702.298">
+            <td>
+                <span class="timestamp">28:12</span>
+            </td>
+            <td><p class="text">And remember that there are dozens of episodes of the Let's Learn English series you can watch to help you learn English.</p></td>
+        </tr>
+        
+        <tr data-start="1702.298" data-end="1718.925">
+            <td>
+                <span class="timestamp">28:22</span>
+            </td>
+            <td><p class="text">And don't forget, on our website, learningenglish.voanews.com, each episode of Let's Learn English comes with a lesson plan you can download to help you learn more or even teach English to others.</p></td>
+        </tr>
+        
+        <tr data-start="1721.383" data-end="1736.774">
+            <td>
+                <span class="timestamp">28:41</span>
+            </td>
+            <td><p class="text">And so you can get practice with superlatives, write to us at learningenglishatVOANews.com and tell us about something in your town that is the biggest, tallest, oldest, or most interesting thing.</p></td>
+        </tr>
+        
+        <tr data-start="1736.774" data-end="1742.118">
+            <td>
+                <span class="timestamp">28:56</span>
+            </td>
+            <td><p class="text">And thank you for listening to the Lesson of the Day on the Learning English Podcast.</p></td>
+        </tr>
+        
+        <tr data-start="1742.118" data-end="1743.779">
+            <td>
+                <span class="timestamp">29:02</span>
+            </td>
+            <td><p class="text">I'm Andrew Smith.</p></td>
+        </tr>
+        
+        <tr data-start="1743.779" data-end="1744.82">
+            <td>
+                <span class="timestamp">29:03</span>
+            </td>
+            <td><p class="text">And I'm Jill Robbins.</p></td>
+        </tr>
+        
+        <tr data-start="1771.161" data-end="1773.846">
+            <td>
+                <span class="timestamp">29:31</span>
+            </td>
+            <td><p class="text">And that's our program for today.</p></td>
+        </tr>
+        
+        <tr data-start="1773.846" data-end="1779.977">
+            <td>
+                <span class="timestamp">29:33</span>
+            </td>
+            <td><p class="text">Join us again tomorrow to keep learning English through stories from around the world.</p></td>
+        </tr>
+        
+        <tr data-start="1779.977" data-end="1781.62">
+            <td>
+                <span class="timestamp">29:39</span>
+            </td>
+            <td><p class="text">I'm Ashley Thompson.</p></td>
+        </tr>
+        
+        <tr data-start="1781.62" data-end="1782.943">
+            <td>
+                <span class="timestamp">29:41</span>
+            </td>
+            <td><p class="text">And I'm Dan Novak.</p></td>
+        </tr>
+        
+        
+    </table>
+</body>
+</html>
