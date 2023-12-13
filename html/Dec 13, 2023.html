@@ -4534,7 +4534,7 @@
           textNode = range.offsetNode;
           offset = range.offset;
         } else if (document.caretRangeFromPoint) {
-          range = document.caretRangeFromPoint(evt.pageX, evt.pageY);
+          range = document.caretRangeFromPoint(evt.touches[0].clientX, evt.touches[0].clientY);
           textNode = range.startContainer;
           offset = range.startOffset;
         } else {
