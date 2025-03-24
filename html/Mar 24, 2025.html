@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mar 24, 2025 Transcript - VOA Learning English</title>
+    <style>
+      body {
+        font-family: "Roboto", "Arial", sans-serif;
+      }
+      table {
+        border-collapse: collapse; /* This removes the space between the table cells */
+      }
+      .timestamp {
+        color: #065fd4;
+        background-color: #def1ff;
+        padding: 0 4px;
+        border-radius: 4px;
+        margin-right: 4px;
+        font-size: 0.8em;
+      }
+      .subtitle-text {
+        margin: 5px 0;
+        overflow-wrap: anywhere;
+      }
+      .highlighted {
+        background-color: #f5f5f5;
+      }
+
+      #control-panel {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        border: none;
+      }
+
+      #control-panel button {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 0;
+        margin: 0;
+        height: 35px;
+        cursor: pointer;
+        width: 100%;
+      }
+      #progress-bar-container {
+        position: fixed;
+        bottom: 35px; /* Adjust this value based on the height of your play button */
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ccc;
+        margin: 0;
+      }
+
+      #progress-bar {
+        height: 100%;
+        background-color: #f00;
+        width: 0;
+      }
+      .subtitle-content {
+        display: flex;
+        align-items: center;
+      }
+      .play-icon {
+        margin-right: 8px; /* Add space between icon and text */
+        cursor: pointer;
+      }
+      #loop-subtitle-button.active {
+        background-color: #ddd; /* Change the background color when the loop is active */
+      }
+    </style>
+
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "jtao57yeqh");
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3DY9EQQENK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-3DY9EQQENK");
+    </script>
+  </head>
+  <body>
+    <div id="player-container" style="display: none">
+      <div id="player"></div>
+    </div>
+    <button id="toggle-player-button">Show/Hide Player</button>
+    <p>
+      <a href="https://www.youtube.com/watch?v=EKh_yLOKNgE" target="_blank">
+        Mar 24, 2025 VOA Learning English Broadcast
+      </a>
+    </p>
+
+    <table class="subtitles">
+      
+    </table>
+    <div style="margin-bottom: 37px"></div>
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="control-panel">
+      <button id="loop-subtitle-button">Loop</button>
+      <button id="previous-subtitle-button">Previous</button>
+      <button id="play-pause-button">Play</button>
+      <button id="next-subtitle-button">Next</button>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+      let player;
+      let playPauseButton = document.getElementById("play-pause-button");
+      let togglePlayerButton = document.getElementById("toggle-player-button");
+      let playerContainer = document.getElementById("player-container");
+      let subtitles = document.querySelectorAll("table .subtitle-line");
+      let progressBar = document.getElementById("progress-bar");
+      let updateProgressBarInterval;
+      let highlightSubtitleTimeout;
+      let loopStatus = false; // Add a loop status variable
+      let loopTimeout;
+      let loopWaiting = false;
+
+      document
+        .getElementById("loop-subtitle-button")
+        .addEventListener("click", function () {
+          loopStatus = !loopStatus;
+          if (loopStatus) {
+            this.classList.add("active");
+          } else {
+            this.classList.remove("active");
+          }
+          loopHandle();
+        });
+
+      function seekToAndPlay(num) {
+        if (num !== null) {
+          player.seekTo(num, true);
+        }
+        player.playVideo();
+        loopWaiting = true;
+      }
+
+      function loopHandle() {
+        if (loopTimeout) {
+          clearTimeout(loopTimeout);
+        }
+        if (loopStatus && player.getPlayerState() === YT.PlayerState.PLAYING) {
+          let currentTime = player.getCurrentTime();
+          let subtitleIndex = getSubtitleIndex(currentTime);
+          console.log("current time:", currentTime);
+          console.log("subtitle index:", subtitleIndex);
+          if (subtitleIndex >= 0) {
+            let currentStartTime = parseFloat(
+              subtitles[subtitleIndex].getAttribute("data-start")
+            );
+            let currentEndTime = parseFloat(
+              subtitles[subtitleIndex].getAttribute("data-end")
+            );
+            let delay = (currentEndTime - currentTime) * 1000;
+            loopTimeout = setTimeout(() => {
+              if (loopStatus) {
+                player.seekTo(currentStartTime, true);
+                loopWaiting = true;
+              }
+            }, delay);
+          }
+        }
+      }
+
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("player", {
+          height: "120",
+          width: "560",
+          videoId: "EKh_yLOKNgE",
+          playerVars: {
+            controls: 1,
+            playsinline: 1,
+            fs: 0,
+            disablekb: 1,
+            iv_load_policy: 3,
+          },
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange,
+            onError: onPlayerError,
+          },
+        });
+      }
+
+      function onPlayerError(event) {
+        console.error("YouTube Player Error:", event.data);
+      }
+
+      function onPlayerReady(event) {
+        console.log("onPlayerReady");
+        playPauseButton.addEventListener("click", togglePlay);
+        togglePlayerButton.addEventListener("click", togglePlayer);
+
+        // Set the initial value of the progress bar
+        let percentage = (player.getCurrentTime() / player.getDuration()) * 100;
+        progressBar.style.width = percentage + "%";
+
+        document.addEventListener("keydown", function (event) {
+          if (event.code === "Space") {
+            event.preventDefault();
+            togglePlay();
+          }
+        });
+        document.addEventListener("keydown", function (event) {
+          let currentTime, subtitleIndex, startTime;
+          switch (event.key) {
+            case "a": // Play previous subtitle
+              currentTime = player.getCurrentTime();
+              subtitleIndex = getSubtitleIndex(currentTime);
+              if (subtitleIndex > 0) {
+                startTime = parseFloat(
+                  subtitles[subtitleIndex - 1].getAttribute("data-start")
+                );
+                seekToAndPlay(startTime);
+              }
+              break;
+            case "s": // Replay current subtitle
+              currentTime = player.getCurrentTime();
+              subtitleIndex = getSubtitleIndex(currentTime);
+              if (subtitleIndex >= 0) {
+                startTime = parseFloat(
+                  subtitles[subtitleIndex].getAttribute("data-start")
+                );
+                seekToAndPlay(startTime);
+              }
+              break;
+            case "d": // Play next subtitle
+              currentTime = player.getCurrentTime();
+              let nextSubtitleIndex = getNextSubtitleIndex(currentTime);
+              if (nextSubtitleIndex >= 0) {
+                startTime = parseFloat(
+                  subtitles[nextSubtitleIndex].getAttribute("data-start")
+                );
+                seekToAndPlay(startTime);
+              }
+              break;
+          }
+        });
+
+        document
+          .getElementById("previous-subtitle-button")
+          .addEventListener("click", function () {
+            let currentTime = player.getCurrentTime();
+            let subtitleIndex = getSubtitleIndex(currentTime);
+            if (subtitleIndex > 0) {
+              let startTime = parseFloat(
+                subtitles[subtitleIndex - 1].getAttribute("data-start")
+              );
+              seekToAndPlay(startTime);
+            }
+          });
+
+        document
+          .getElementById("next-subtitle-button")
+          .addEventListener("click", function () {
+            let currentTime = player.getCurrentTime();
+            let nextSubtitleIndex = getNextSubtitleIndex(currentTime);
+            if (nextSubtitleIndex >= 0) {
+              let startTime = parseFloat(
+                subtitles[nextSubtitleIndex].getAttribute("data-start")
+              );
+              seekToAndPlay(startTime);
+            }
+          });
+
+        let subtitlesTable = document.querySelector("table.subtitles");
+
+        subtitlesTable.addEventListener("click", handleSubtitleClick);
+
+        function handleSubtitleClick(event) {
+          const target = event.target;
+          if (target.classList.contains("play-icon")) {
+            const startTime = parseFloat(
+              target.closest("tr.subtitle-line").getAttribute("data-start")
+            );
+            seekToAndPlay(startTime);
+          }
+        }
+      }
+
+      function onPlayerStateChange(event) {
+        console.log("onPlayerStateChange, event.data:", event.data);
+        // -1 (unstarted)
+        // 0 (ended)
+        // 1 (playing)
+        // 2 (paused)
+        // 3 (buffering)
+        // 5 (video cued)
+        // YT.PlayerState.ENDED
+        // YT.PlayerState.PLAYING
+        // YT.PlayerState.PAUSED
+        // YT.PlayerState.BUFFERING
+        // YT.PlayerState.CUED
+        if (event.data === YT.PlayerState.PLAYING) {
+          playPauseButton.textContent = "Pause";
+        } else {
+          playPauseButton.textContent = "Play";
+        }
+
+        if (updateProgressBarInterval) {
+          clearInterval(updateProgressBarInterval);
+        }
+        // Clear the timeout if it exists
+        if (highlightSubtitleTimeout) {
+          clearTimeout(highlightSubtitleTimeout);
+        }
+
+        if (event.data === YT.PlayerState.PLAYING) {
+          // Get the current time from the player
+          const currentTime = player.getCurrentTime();
+
+          // Start the interval to update the progress bar
+          updateProgressBarInterval = setInterval(function () {
+            let percentage =
+              (player.getCurrentTime() / player.getDuration()) * 100;
+            progressBar.style.width = percentage + "%"; // Update the width of the progress bar
+          }, 1000);
+
+          // Start the timeout to highlight the next subtitle
+          highlightNextSubtitle();
+          if (loopWaiting) {
+            loopHandle();
+          }
+        }
+      }
+
+      function togglePlay() {
+        console.log("togglePlay");
+        if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+          player.pauseVideo();
+        } else {
+          player.playVideo();
+          loopWaiting = true;
+        }
+      }
+
+      function togglePlayer() {
+        if (playerContainer.style.display === "none") {
+          playerContainer.style.display = "block";
+        } else {
+          playerContainer.style.display = "none";
+        }
+      }
+
+      function getSubtitleIndex(currentTime) {
+        for (let i = 0; i < subtitles.length; i++) {
+          const startTime = parseFloat(subtitles[i].getAttribute("data-start"));
+          const endTime = parseFloat(subtitles[i].getAttribute("data-end"));
+          if (currentTime >= startTime && currentTime <= endTime) {
+            return i;
+          }
+        }
+        return -1; // Return -1 if no subtitle is found for the current time
+      }
+
+      function getNextSubtitleIndex(currentTime) {
+        for (let i = 0; i < subtitles.length; i++) {
+          const startTime = parseFloat(subtitles[i].getAttribute("data-start"));
+          if (currentTime < startTime) {
+            return i;
+          }
+        }
+        return -1; // Return -1 if no next subtitle is found for the current time
+      }
+      function highlightNextSubtitle() {
+        let currentTime = player.getCurrentTime();
+
+        // Use the getSubtitleIndex function to get the subtitle index
+        let subtitleIndex = getSubtitleIndex(currentTime);
+
+        // Remove the highlighted class from all subtitles
+        subtitles.forEach((subtitle) => {
+          subtitle.classList.remove("highlighted");
+        });
+
+        // Add the highlighted class to the current subtitle
+        if (subtitleIndex >= 0) {
+          subtitles[subtitleIndex].classList.add("highlighted");
+
+          // Check if the subtitle is in the viewport
+          let rect = subtitles[subtitleIndex].getBoundingClientRect();
+          if (rect.top < 0 || rect.bottom > window.innerHeight) {
+            subtitles[subtitleIndex].scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
+
+          // Set a timeout to highlight the next subtitle
+          let nextSubtitleIndex = subtitleIndex + 1;
+
+          if (nextSubtitleIndex < subtitles.length) {
+            let nextStartTime = parseFloat(
+              subtitles[nextSubtitleIndex].getAttribute("data-start")
+            );
+            let delay = (nextStartTime - currentTime) * 1000;
+            highlightSubtitleTimeout = setTimeout(highlightNextSubtitle, delay);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
